@@ -90,6 +90,8 @@ if(!sum(!p_isinstalled(pkgs))==0){
   )
 }
 
+if(!require(paralellsugar)) devtools::install_github("https://github.com/nathanvan/parallelsugar")
+
 # load the packages
 p_load(pkgs, character.only = TRUE)
 rm(pkgs)
