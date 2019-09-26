@@ -26,14 +26,14 @@ years$YEAR <- seq(launch_year+1,launch_year+STEPS,1)
 #
 # IF RUNNING THIS SCRIPT FOR THE FIRST LINE, Run the download.file line and the gunzip line.
 #
-# download.file("https://seer.cancer.gov/popdata/yr1969_2016.19ages/us.1969_2016.19ages.adjusted.txt.gz", "DATA/us.1969_2016.19ages.adjusted.txt.gz")
+# download.file("https://seer.cancer.gov/popdata/yr1969_2017.19ages/us.1969_2017.19ages.adjusted.txt.gz", "DATA/us.1969_2017.19ages.adjusted.txt.gz")
 # UNZIPPING THE DATA FILE
-# gunzip("DATA/us.1969_2016.19ages.adjusted.txt.gz", overwrite = TRUE, remove = TRUE)
+# gunzip("DATA/us.1969_2017.19ages.adjusted.txt.gz", overwrite = TRUE, remove = TRUE)
 #
 ###################################################################
 
 # READING THE cdc DATA INTO R. THE DATA ARE IN A SINGLE COLUMN FORMAT AND SO THEY MUST BE BROKEN APART.
-K05_pop<- read.table("DATA/us.1969_2016.19ages.adjusted.txt") 
+K05_pop<- read.table("DATA/us.1969_2017.19ages.adjusted.txt") 
 K05_pop$V1 <- as.character(K05_pop$V1) # SETTING THE ENTIRE SINGLE VARIABLE INTO A CHARACTER
 K05_pop$YEAR <- as.numeric(substr(K05_pop$V1,1,4)) # SEPARATING THE YEAR AND SETTING IT AS A NUMBER
 K05_pop$STATEID <- substr(K05_pop$V1, 5,6) # SEPARATING THE 2 CHARACTER STATE ABBREVIATION
