@@ -28,9 +28,9 @@ years$YEAR <- seq(launch_year+1,launch_year+STEPS,1)
 # #
 # # IF RUNNING THIS SCRIPT FOR THE FIRST LINE, Run the download.file line and the gunzip line.
 # #
-# download.file("https://seer.cancer.gov/popdata/yr1990_2016.19ages/us.1990_2016.19ages.adjusted.txt.gz", "DATA/us.1990_2016.19ages.adjusted.txt.gz")
+# download.file("https://seer.cancer.gov/popdata/yr1990_2017.19ages/us.1990_2017.19ages.adjusted.txt.gz", "DATA/us.1990_2017.19ages.adjusted.txt.gz")
 # # UNZIPPING THE DATA FILE
-# gunzip("DATA/us.1990_2016.19ages.adjusted.txt.gz", overwrite = TRUE, remove = TRUE)
+# gunzip("DATA/us.1990_2017.19ages.adjusted.txt.gz", overwrite = TRUE, remove = TRUE)
 # #
 ###################################################################
 
